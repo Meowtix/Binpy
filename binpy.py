@@ -38,7 +38,7 @@ def to_hex(binary):
 
     hexa = ''
     binary_chunks = [binary[i:i+4] for i in range(0, len(binary), 4)]
-    for i, chunk in enumerate(binary_chunks):
+    for chunk in binary_chunks:
         if len(chunk) < 4:
             missing = '0' * (4 - len(chunk))
             hexa += bin_to_hex_map[missing + chunk]
